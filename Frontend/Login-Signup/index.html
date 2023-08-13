@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Slide Navbar</title>
+        <link rel="stylesheet" type="text/css" href="slide navbar style.css" />
+      </head>
+      <body>
+        <div class="main">
+          <input type="checkbox" id="chk" aria-hidden="true" />
+
+          <div class="signup">
+            <form>
+              <label for="chk" aria-hidden="true">Sign up</label>
+              <input
+                id="UserName"
+                type="text"
+                name="txt"
+                placeholder="User name"
+                required=""
+              />
+              <input
+                id="Sign-Email"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required=""
+              />
+              <input
+                id="Sign-pass"
+                type="password"
+                name="pswd"
+                placeholder="Password"
+                required=""
+              />
+              <button id="Sign">Sign up</button>
+            </form>
+          </div>
+          <div class="login">
+            <form>
+              <label for="chk" id="LoginPage" aria-hidden="true">Login</label>
+              <input
+                id="Login-Email"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required=""
+              />
+              <input
+                id="Login-Password"
+                type="password"
+                name="pswd"
+                placeholder="Password"
+                required=""
+              />
+              <button id="Login">Login</button>
+            </form>
+          </div>
+        </div>
+        <script src="./src/Login.js"></script>
+      </body>
+    </html>
+    <!-- partial -->
+  </body>
+</html>

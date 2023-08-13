@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Src/style.css" />
+    <title>Survey</title>
+    <script src="https://unpkg.com/soloalert" type="text/javascript" defer></script>
+    <script
+      defer
+      src="https://kit.fontawesome.com/89bfed85c5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="blackGround"></div>
+    <input type="submit" value="New +" id="new" style="margin-left: 20px;" />
+    <input type="submit" value="submit" style="margin-left: 20px;" id="submit" />
+    <input type="submit" value="back" style="margin-left: 20px;" id="back" />
+    <div class="card" id="confirm">
+      <button type="text" class="dismiss" id="x">×</button>
+      <div class="header">
+        <div class="image" style="font-size: 42px;">!
+            <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+            <g
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              id="SVGRepo_tracerCarrier"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="1.5"
+                stroke="#000000"
+                d="M20 7L9.00004 18L3.99994 13"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="content">
+          <span class="title">Are you sure?</span>
+        </div>
+        <div class="actions">
+          <button type="text" style="background-color: red;" class="history" id="confirmBtn">Yes</button>
+          <button type="button" class="track"id="cancelBtn">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="edit">
+      <button type="text" class="dismiss" id="editx">×</button>
+      <div class="header">
+        <div class="image" id="re-editAnimation" style="font-size: 42px;">
+          <i class="fa-sharp fa-regular fa-pen-to-square fa-xs" style="color: #000000"></i>
+            <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+            <g
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              id="SVGRepo_tracerCarrier"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="1.5"
+                stroke="#000000"
+                d="M20 7L9.00004 18L3.99994 13"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="content">
+          <span class="title">write the question in mind</span>
+        </div>
+        <div class="actions">
+          <input type="text" style="background-color: white;color: black; width: 89%;border: 2px solid grey;" class="history" id="editBtn"></input>
+          <button type="button" class="track"id="editconformlBtn">conform</button>
+        </div>
+      </div>
+    </div>
+    <script src="./Src/index.js"></script>
+  </body>
+</html>
