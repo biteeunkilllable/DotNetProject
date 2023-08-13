@@ -50,7 +50,8 @@ let Question = [];
 let questions = [];
 for (let i of questions) NewQuestion(i);
 function NewQuestion(questionString = "") {
-  if (!questionString.length) questionString = prompt("insert the question");
+  console.log("From NewQuestion");
+  if (!questionString.length) return;
   Question.push(questionString);
   let char = CharGen.next().value;
   let div = document.createElement("div");
@@ -102,7 +103,10 @@ function NewQuestion(questionString = "") {
   document.body.prepend(div);
   starCounting();
 }
-document.getElementById("new").addEventListener("click", NewQuestion);
+document.getElementById("new").addEventListener("click", () => {
+  let bool = true;
+  promptNew(bool);
+}); // todo edit it to make it so when the insertion is done make the newQuestion
 document.getElementById("submit").addEventListener("click", () => {
   document.getElementById("submit").dsabled = true;
   setTimeout(() => {
@@ -253,3 +257,53 @@ window.prompt = function (p, deleteButton, editButton) {
     (k) => k.key == "Enter" && change.click()
   );
 };
+function promptNew(bool) {
+  let div = document.createElement("div");
+  div.classList.add("cardEdit");
+  div.innerHTML = `<div class="headerEdit">
+  <div class="imageEdit">
+  <svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 448 512"><style>svg{fill:#ffffff}</style><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+  </div>
+  <div class="contentEdit">
+     <span class="titleEdit">New questions</span>
+     <br/>
+     <br/>
+     <br/>
+  </div>
+   <div class="actionsEdit">
+   <div class="input-containerEdit" style="background-color:transparent;">
+   <input placeholder="Enter text" class="input-fieldEdit" id="txt" type="text">
+   <br/>
+   <br/>
+   <button class="desactivateEdit" id="Change" type="button">Change</button>
+   <button class="cancelEdit" type="button" id="Cancel">Cancel</button>
+<span class="input-highlightEdit"></span>
+</div>
+
+  </div>
+</div>`;
+  document.body.append(div);
+  let input = document.getElementById("txt");
+  input.focus();
+  let change = document.getElementById("Change");
+  change.addEventListener("click", () => {
+    change.dsabled = true;
+    setTimeout(() => {
+      change.dsabled = false;
+    }, 3 * 1000);
+    if (input.value.length) {
+      if (bool) {
+        NewQuestion(input.value);
+        bool = false;
+      }
+    }
+    div.remove();
+  });
+  document.getElementById("Cancel").addEventListener("click", () => {
+    div.remove();
+  });
+  document.addEventListener(
+    "keypress",
+    (k) => k.key == "Enter" && change.click()
+  );
+}

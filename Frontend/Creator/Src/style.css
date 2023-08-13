@@ -1,11 +1,11 @@
 label:before {
   content: "☆";
-  color: white;
+  color: #ffd700;
   font-size: 2em;
 }
 label.on:before {
   content: "★";
-  color: white;
+  color: #ffd700;
   /* uncomment for iOS */
   /*   font-size: 2.4em;
     top: -0.1em;
@@ -13,7 +13,7 @@ label.on:before {
 }
 input:checked + label:before {
   content: "★";
-  color: white;
+  color: #ffd700;
   /* uncomment for iOS */
   /*   font-size: 2.4em;
     top: -0.1em;
@@ -45,7 +45,7 @@ input[type="radio"] {
 body {
   overflow-x: hidden;
   margin: 2em;
-  background-color: #448ac1;
+  background-color: #101010;
   text-align: center;
   /* remove gray highlight on tap in iOS */
   -webkit-tap-highlight-color: transparent;
@@ -65,7 +65,7 @@ input[type="submit"] {
   cursor: pointer;
   font-size: 24px;
   font-family: Tahoma, "Segoe UI", Geneva, Verdana;
-  color: #448ac1;
+  color: #101010;
   background-color: white;
   width: 80px;
   height: 80px;
@@ -559,4 +559,10 @@ button:hover {
   border-radius: 0.375rem;
   border: 1px solid #d1d5db;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+#click {
+  outline: 0;
+}
+#click:focus {
+  outline: 0;
 }

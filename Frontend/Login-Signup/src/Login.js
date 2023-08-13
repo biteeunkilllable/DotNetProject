@@ -71,7 +71,6 @@ btnLog.addEventListener("click", (e) => {
       console.log(res);
       if (Condition) {
         localStorage.setItem("User_Id", res.User_Id);
-        alert("successfull");
         location.href = "/Frontend/Dashboard/Index.html";
       } else throw new Error("error");
     })

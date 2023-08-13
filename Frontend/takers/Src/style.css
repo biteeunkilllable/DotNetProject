@@ -1,11 +1,11 @@
 label:before {
   content: "☆";
-  color: white;
+  color: #ffd700;
   font-size: 2em;
 }
 label.on:before {
   content: "★";
-  color: white;
+  color: #ffd700;
   /* uncomment for iOS */
   /*   font-size: 2.4em;
     top: -0.1em;
@@ -13,7 +13,7 @@ label.on:before {
 }
 input:checked + label:before {
   content: "★";
-  color: white;
+  color: #ffd700;
   /* uncomment for iOS */
   /*   font-size: 2.4em;
     top: -0.1em;
@@ -44,7 +44,7 @@ input[type="radio"] {
 /* Non-essential */
 body {
   margin: 2em;
-  background-color: #448ac1;
+  background-color: #101010;
   text-align: center;
   /* remove gray highlight on tap in iOS */
   -webkit-tap-highlight-color: transparent;
